@@ -1,0 +1,17 @@
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\bin\Debug\QueueingSystem.dll
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\bin\Debug\QueueingSystem.pdb
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\obj\Debug\QueueingSystem.csprojAssemblyReference.cache
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\obj\Debug\QueueingSystem.dll
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\obj\Debug\QueueingSystem.pdb
+E:\5 Course\MM\2\QueueingSystem\bin\Debug\QueueingSystem.dll
+E:\5 Course\MM\2\QueueingSystem\bin\Debug\QueueingSystem.pdb
+E:\5 Course\MM\2\QueueingSystem\obj\Debug\QueueingSystem.csprojAssemblyReference.cache
+E:\5 Course\MM\2\QueueingSystem\obj\Debug\QueueingSystem.csproj.CoreCompileInputs.cache
+E:\5 Course\MM\2\QueueingSystem\obj\Debug\QueueingSystem.dll
+E:\5 Course\MM\2\QueueingSystem\obj\Debug\QueueingSystem.pdb
+E:\5 Course\MM\3\QueueingSystem\bin\Debug\QueueingSystem.dll
+E:\5 Course\MM\3\QueueingSystem\bin\Debug\QueueingSystem.pdb
+E:\5 Course\MM\3\QueueingSystem\obj\Debug\QueueingSystem.csprojAssemblyReference.cache
+E:\5 Course\MM\3\QueueingSystem\obj\Debug\QueueingSystem.csproj.CoreCompileInputs.cache
+E:\5 Course\MM\3\QueueingSystem\obj\Debug\QueueingSystem.dll
+E:\5 Course\MM\3\QueueingSystem\obj\Debug\QueueingSystem.pdb

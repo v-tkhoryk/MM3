@@ -1,0 +1,19 @@
+C:\Users\vtkhoryx\source\repos\MathMeth_2\MathMeth_2\bin\Debug\MathMeth_2.exe.config
+C:\Users\vtkhoryx\source\repos\MathMeth_2\MathMeth_2\bin\Debug\MathMeth_2.exe
+C:\Users\vtkhoryx\source\repos\MathMeth_2\MathMeth_2\bin\Debug\MathMeth_2.pdb
+C:\Users\vtkhoryx\source\repos\MathMeth_2\MathMeth_2\bin\Debug\QueueingSystem.dll
+C:\Users\vtkhoryx\source\repos\MathMeth_2\MathMeth_2\bin\Debug\QueueingSystem.pdb
+C:\Users\vtkhoryx\source\repos\MathMeth_2\MathMeth_2\obj\Debug\MathMeth_2.csprojAssemblyReference.cache
+C:\Users\vtkhoryx\source\repos\MathMeth_2\MathMeth_2\obj\Debug\MathMeth_2.csproj.CopyComplete
+C:\Users\vtkhoryx\source\repos\MathMeth_2\MathMeth_2\obj\Debug\MathMeth_2.exe
+C:\Users\vtkhoryx\source\repos\MathMeth_2\MathMeth_2\obj\Debug\MathMeth_2.pdb
+E:\5 Course\MM\2\MathMeth_2\bin\Debug\MathMeth_2.exe.config
+E:\5 Course\MM\2\MathMeth_2\bin\Debug\MathMeth_2.exe
+E:\5 Course\MM\2\MathMeth_2\bin\Debug\MathMeth_2.pdb
+E:\5 Course\MM\2\MathMeth_2\bin\Debug\QueueingSystem.dll
+E:\5 Course\MM\2\MathMeth_2\bin\Debug\QueueingSystem.pdb
+E:\5 Course\MM\2\MathMeth_2\obj\Debug\MathMeth_2.csprojAssemblyReference.cache
+E:\5 Course\MM\2\MathMeth_2\obj\Debug\MathMeth_2.csproj.CoreCompileInputs.cache
+E:\5 Course\MM\2\MathMeth_2\obj\Debug\MathMeth_2.csproj.CopyComplete
+E:\5 Course\MM\2\MathMeth_2\obj\Debug\MathMeth_2.exe
+E:\5 Course\MM\2\MathMeth_2\obj\Debug\MathMeth_2.pdb
