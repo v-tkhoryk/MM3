@@ -35,7 +35,7 @@ namespace QueueingSystem
         double avgTimeInQueue;
         double probMaxQueue;
         double probSystemFree;
-        double probSystemBusy;
+        //double probSystemBusy;
 
         public MonoChannel(double _lambda, double _st, int _queueSize, int _channels = 1)
         {
@@ -53,14 +53,16 @@ namespace QueueingSystem
         {
             for (int s = 0; s < channels; s++)
                 probSystemFree += Math.Pow(channels * rho, s) / Factorial(s);
-            probSystemFree += 
+            probSystemFree +=
                 (Math.Pow(channels * rho, channels) / Factorial(channels)) * (1 - Math.Pow(rho, queueMaxSize + 1)) / (1 - rho);
             probSystemFree = 1 / probSystemFree;
-            for (int i = 0; i < channels; i++)
-                avgCallsAmount += Math.Pow(r, i) / Factorial(i);
-            avgCallsAmount *= r * probSystemFree;
-            avgCallsAmount += (rho * ProbabilityOfCallsInSystem(channels) / Math.Pow(1 - rho, 2))
-                * (1 + channels*(1 - rho) - (1 + Math.Pow(rho, queueMaxSize)*(1 - rho)*(channels + queueMaxSize)));
+            //for (int i = 0; i < channels; i++)
+            //    avgCallsAmount += Math.Pow(r, i) / Factorial(i);
+            //avgCallsAmount *= r * probSystemFree;
+            //avgCallsAmount += (rho * ProbabilityOfCallsInSystem(channels) / Math.Pow(1 - rho, 2))
+            //    * (1 + channels*(1 - rho) - (1 + Math.Pow(rho, queueMaxSize)*(1 - rho)*(channels + queueMaxSize)));
+
+            avgCallsAmount = rho*(1 + rho*(1 - Math.Pow(rho, queueMaxSize)*(queueMaxSize*(1 -rho)+1))/Math.Pow(1 - rho, 2))*probSystemFree;
 
             avgCallsAmountInQueue = (rho * ProbabilityOfCallsInSystem(channels) / Math.Pow(1 - rho, 2))
                 * (1 - Math.Pow(rho, queueMaxSize) * (1 + queueMaxSize * (1 - rho)));
@@ -68,15 +70,24 @@ namespace QueueingSystem
             double a = (rho * ProbabilityOfCallsInSystem(channels) / Math.Pow(1 - rho, 2));
             double b = (1 - Math.Pow(rho, queueMaxSize) * (1 + queueMaxSize * (1 - rho)));
 
-            avgCallsAmountInQueue = a * b;
+            //avgCallsAmountInQueue = a * b;
+
+            avgCallsAmountInQueue = rho * rho * probSystemFree *
+                                    (1 - Math.Pow(rho, queueMaxSize) * (queueMaxSize * (1 - rho) + 1)) /
+                                    (Math.Pow(1 - rho, 2));
+            avgCallsAmount = ProbabilityOfCallsInSystem(1) + avgCallsAmountInQueue;
+
             probMaxQueue = ProbabilityOfCallsInSystem(queueMaxSize);
 
             for (int k = 0; k < queueMaxSize; k++)
                 avgTimeInQueue += k + 1;
-            avgTimeInQueue *= ProbabilityOfCallsInSystem(channels + queueMaxSize) * st / channels;
+            // методичка
+            //avgTimeInQueue *= ProbabilityOfCallsInSystem(channels + queueMaxSize) * st / channels;
+            //avgTimeInSystem = avgTimeInQueue + st;
 
-            avgTimeInSystem = avgTimeInQueue + st;
 
+            avgTimeInQueue = avgCallsAmountInQueue / lambda;
+            avgTimeInSystem = avgCallsAmount / lambda;
         }
 
         private double ProbabilityOfCallsInSystem(int calls)
