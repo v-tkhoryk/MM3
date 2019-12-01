@@ -20,3 +20,9 @@ C:\Users\vtkhoryx\source\repos\MM3\QueueingSystem\bin\Debug\QueueingSystem.pdb
 C:\Users\vtkhoryx\source\repos\MM3\QueueingSystem\obj\Debug\QueueingSystem.csprojAssemblyReference.cache
 C:\Users\vtkhoryx\source\repos\MM3\QueueingSystem\obj\Debug\QueueingSystem.dll
 C:\Users\vtkhoryx\source\repos\MM3\QueueingSystem\obj\Debug\QueueingSystem.pdb
+E:\5 Course\MM\MM3\QueueingSystem\bin\Debug\QueueingSystem.dll
+E:\5 Course\MM\MM3\QueueingSystem\bin\Debug\QueueingSystem.pdb
+E:\5 Course\MM\MM3\QueueingSystem\obj\Debug\QueueingSystem.csprojAssemblyReference.cache
+E:\5 Course\MM\MM3\QueueingSystem\obj\Debug\QueueingSystem.csproj.CoreCompileInputs.cache
+E:\5 Course\MM\MM3\QueueingSystem\obj\Debug\QueueingSystem.dll
+E:\5 Course\MM\MM3\QueueingSystem\obj\Debug\QueueingSystem.pdb

@@ -17,3 +17,13 @@ C:\Users\vtkhoryx\source\repos\MM3\MathMeth_2\obj\Debug\MathMeth_3.csprojAssembl
 C:\Users\vtkhoryx\source\repos\MM3\MathMeth_2\obj\Debug\MathMeth_3.csproj.CopyComplete
 C:\Users\vtkhoryx\source\repos\MM3\MathMeth_2\obj\Debug\MathMeth_2.exe
 C:\Users\vtkhoryx\source\repos\MM3\MathMeth_2\obj\Debug\MathMeth_2.pdb
+E:\5 Course\MM\MM3\MathMeth_2\bin\Debug\MathMeth_2.exe.config
+E:\5 Course\MM\MM3\MathMeth_2\bin\Debug\MathMeth_2.exe
+E:\5 Course\MM\MM3\MathMeth_2\bin\Debug\MathMeth_2.pdb
+E:\5 Course\MM\MM3\MathMeth_2\bin\Debug\QueueingSystem.dll
+E:\5 Course\MM\MM3\MathMeth_2\bin\Debug\QueueingSystem.pdb
+E:\5 Course\MM\MM3\MathMeth_2\obj\Debug\MathMeth_3.csprojAssemblyReference.cache
+E:\5 Course\MM\MM3\MathMeth_2\obj\Debug\MathMeth_3.csproj.CoreCompileInputs.cache
+E:\5 Course\MM\MM3\MathMeth_2\obj\Debug\MathMeth_3.csproj.CopyComplete
+E:\5 Course\MM\MM3\MathMeth_2\obj\Debug\MathMeth_2.exe
+E:\5 Course\MM\MM3\MathMeth_2\obj\Debug\MathMeth_2.pdb

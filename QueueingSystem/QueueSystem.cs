@@ -2,7 +2,7 @@
 
 namespace QueueingSystem
 {
-    public class MonoChannel
+    public class QueueSystem
     {
         /// <summary>
         /// Average intensity of incoming calls flow
@@ -26,7 +26,7 @@ namespace QueueingSystem
 
         double r;
 
-        int channels = 1;
+        int channels;
         int queueMaxSize;
 
         double avgCallsAmount;
@@ -35,14 +35,14 @@ namespace QueueingSystem
         double avgTimeInQueue;
         double probMaxQueue;
         double probSystemFree;
-        //double probSystemBusy;
 
-        public MonoChannel(double _lambda, double _st, int _queueSize, int _channels = 1)
+        public QueueSystem(double _lambda, double _st, int _queueSize, int _channels = 1)
         {
             lambda = _lambda;
             iat = 1 / lambda;
             st = _st;
             queueMaxSize = _queueSize;
+            channels = _channels;
             rho = lambda * st / _channels;
             r = lambda * st;
 
@@ -56,13 +56,13 @@ namespace QueueingSystem
             probSystemFree +=
                 (Math.Pow(channels * rho, channels) / Factorial(channels)) * (1 - Math.Pow(rho, queueMaxSize + 1)) / (1 - rho);
             probSystemFree = 1 / probSystemFree;
-            //for (int i = 0; i < channels; i++)
-            //    avgCallsAmount += Math.Pow(r, i) / Factorial(i);
-            //avgCallsAmount *= r * probSystemFree;
-            //avgCallsAmount += (rho * ProbabilityOfCallsInSystem(channels) / Math.Pow(1 - rho, 2))
-            //    * (1 + channels*(1 - rho) - (1 + Math.Pow(rho, queueMaxSize)*(1 - rho)*(channels + queueMaxSize)));
+            for (int i = 0; i < channels; i++)
+                avgCallsAmount += Math.Pow(r, i) / Factorial(i);
+            avgCallsAmount *= r * probSystemFree;
+            avgCallsAmount += (rho * ProbabilityOfCallsInSystem(channels) / Math.Pow(1 - rho, 2))
+                * (1 + channels*(1 - rho) - (1 + Math.Pow(rho, queueMaxSize)*(1 - rho)*(channels + queueMaxSize)));
 
-            avgCallsAmount = rho*(1 + rho*(1 - Math.Pow(rho, queueMaxSize)*(queueMaxSize*(1 -rho)+1))/Math.Pow(1 - rho, 2))*probSystemFree;
+            //avgCallsAmount = rho*(1 + rho*(1 - Math.Pow(rho, queueMaxSize)*(queueMaxSize*(1 -rho)+1))/Math.Pow(1 - rho, 2))*probSystemFree;
 
             avgCallsAmountInQueue = (rho * ProbabilityOfCallsInSystem(channels) / Math.Pow(1 - rho, 2))
                 * (1 - Math.Pow(rho, queueMaxSize) * (1 + queueMaxSize * (1 - rho)));
@@ -70,24 +70,24 @@ namespace QueueingSystem
             double a = (rho * ProbabilityOfCallsInSystem(channels) / Math.Pow(1 - rho, 2));
             double b = (1 - Math.Pow(rho, queueMaxSize) * (1 + queueMaxSize * (1 - rho)));
 
-            //avgCallsAmountInQueue = a * b;
+            avgCallsAmountInQueue = a * b;
 
+            /*
             avgCallsAmountInQueue = rho * rho * probSystemFree *
                                     (1 - Math.Pow(rho, queueMaxSize) * (queueMaxSize * (1 - rho) + 1)) /
                                     (Math.Pow(1 - rho, 2));
             avgCallsAmount = ProbabilityOfCallsInSystem(1) + avgCallsAmountInQueue;
-
+            */
             probMaxQueue = ProbabilityOfCallsInSystem(queueMaxSize);
+
+            //avgTimeInQueue = avgCallsAmountInQueue / lambda;
+            //avgTimeInSystem = avgCallsAmount / lambda;
 
             for (int k = 0; k < queueMaxSize; k++)
                 avgTimeInQueue += k + 1;
-            // методичка
-            //avgTimeInQueue *= ProbabilityOfCallsInSystem(channels + queueMaxSize) * st / channels;
-            //avgTimeInSystem = avgTimeInQueue + st;
-
-
-            avgTimeInQueue = avgCallsAmountInQueue / lambda;
-            avgTimeInSystem = avgCallsAmount / lambda;
+             //методичка
+            avgTimeInQueue *= ProbabilityOfCallsInSystem(channels + queueMaxSize) * st / channels;
+            avgTimeInSystem = avgTimeInQueue + st;
         }
 
         private double ProbabilityOfCallsInSystem(int calls)
@@ -102,7 +102,7 @@ namespace QueueingSystem
         public void PrintResults()
         {
             Console.WriteLine();
-            Console.WriteLine($"\t\t\tLAMBDA = {lambda}; st = {st}; K = {queueMaxSize}");
+            Console.WriteLine($"\t\t\tLAMBDA = {lambda}; st = {st}; K = {queueMaxSize}; C = {channels}");
             Console.WriteLine(
                 $"rho \t= {rho}\n" +
                 $"L \t= {avgCallsAmount:N3}\n" +
